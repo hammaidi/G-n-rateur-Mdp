@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Genérateur MDP</title>
+</head>
+<body>
+    <!-- container principal -->
+    <div id="container"> 
+        <!-- En tete du container -->
+        <div id = "header">Générateur de mot de passe</div>
+
+        <!-- zone qui va afficher le mot de passe -->
+        <input id = "zoneText" type = "text" readonly/>
+
+        <!-- zone qui va contenir les boutons -->
+        <div id = "zoneBtn">
+            <!-- bouton pour générer le mot de passe, la methode onclick sert d'evenement dans le JS -->
+            <button id = "btn_generer" onclick="generate()">Générer</button>
+            <button id = "btn_copier" onclick="copy()">Copier</button>
+        </div>
+
+        <!-- Slider pour la taille du mot de passe -->
+        <input id = "slider" type="range" min="8" max="16" step="1" />
+        <output id = "slider_value"></output>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

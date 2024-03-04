@@ -1,0 +1,102 @@
+/* Fond d'écran de la page */
+body {
+    background: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace; /* change la police d'affichage */
+    font-weight: bold; /* gras */
+}
+
+/* Container avec l'essentiel des composants à l'intérieur, on détermine la taille */
+/* on utilise un # car dans l'html on utilise id=container, dans le cas de l'utilisation d'une classe on aurait utilisé un point .container */
+#container {
+    background: radial-gradient(circle, rgb(119, 248, 255) 0%, rgb(249, 205, 253) 100%);
+    border-radius: 10%; /* Permet d'arrondir les coins */
+    overflow: hidden; /* Permet d'appliquer le border radius au header, sans cela il n'est pas appliqué dedans */
+    width : 300px;
+    height: 170px;
+}
+
+/* Partie haute du container avec le titre centré */
+#header {
+    display: flex; /* permet de rendre l'élèment facilement déplacable */
+    justify-content: center; /* Centre le contenu sur l'axe X */
+    align-items: center; /* Centre le contenu sur l'axe Y */
+    background-color: rgb(255, 254, 190);
+    height: 30px; /* taille du header */
+}
+
+/* Zone de texte qui va accueillir le mot de passe */
+#zoneText {
+    width: 90%; /* occupe en largeur 90% de la taille définie dans #container car la zone de texte est à l'intérieur du container dans notre HTML */
+    display: flex; /* permet de rendre l'élèment facilement déplacable */
+    margin: auto; /* avec le display flex, centre automatiquement les éléments horizontalement */
+    margin-top: 5%;
+    text-align: center;
+}
+
+/* Style sur la zone des boutons pour les placer correctement */
+/* On créé une zone dédiée car les propriétés ci dessous dans le container global aurait tout modifié, essayez ! */
+#zoneBtn {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 5%; /* positionnement vertical de la zone boutons, 5% par rapport à l'élément du dessus qui est zoneText */
+}
+
+/* Style des boutons */
+button {
+    font-weight: bold; /* police des boutons en gras */
+    padding-inline: 30px; /* taille horizontale des boutons */
+    padding-block: 10px; /* taille verticale des boutons */
+    margin: 5px; /* Espacement autour des boutons */
+    border-radius: 15%; /* coins arrondis */
+}
+
+/* Style appliqué lorsque l'évenement hover se déclenche sur les boutons */
+/* Hover se déclenche automatiquement lorsque la souris passe sur l'élément */
+button:hover {
+    transform: scale(1.1); /* Augmente la taille du bouton de 0.1 soit 10% */
+}
+
+/* style particulier pour le bouton générer */
+#btn_generer {
+    background-color: rgb(164, 253, 211);
+    border: none;
+}
+
+/* style particulier pour le bouton copier */
+#btn_copier {
+    background-color: rgb(255, 205, 253);
+    border: none;
+}
+
+/* positionnement du slider */
+#slider {
+    margin-left: 20%; /* decalage vers le centre */
+    margin-top: 3%; /* Leger décalage avec les boutons qui sont au dessus */
+}
+
+/* Style du slider */
+/* Retire la couleur bleu par défaut du slider */
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+/* propriétés de la barre */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 7px;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,230,0,1) 27%, rgb(21, 202, 8) 67%);
+    border-radius: 3px;
+}
+
+/* propriétés du point */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;  
+    height: 16px;
+    width: 8px;
+    background: rgb(4, 77, 119);
+    margin-top: -4px; /* pour centrer sur la barre sinon un peu trop bas */
+}
+
+
+
